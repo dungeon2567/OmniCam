@@ -1,0 +1,36 @@
+<%- include ('partials/head') %>
+<div class="row text-center mb-3">
+    <div class="col-md-12">
+        <h3>
+            <i class="fas fa-video"></i> SigeoCam<br>
+            <small class="text-muted">Para transmitir a imagem de sua câmera clique em criar transmissão</small>
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <form class="form-inline justify-content-center">
+            <button id="broadcast-btn" type="submit" class="btn btn-primary mb-2">Criar Transmissão</button>
+            <small id="broadcastIdHelpBlock" class="form-text text-muted text-justify mx-sm-3 mb-2">
+                <span class="font-weight-bold">Nota:</span> Este é um sistema de transmissão de vídeo em tempo real. Para criar uma transmissão é só clicar no botão acima, depois é só compartilhar por whatsapp para quantas pessoas quiser.
+            </small>
+        </form>
+        <div class="row text-center">
+            <div id="broadcast-viewers-counter" class="col-md-12"></div>
+        </div>
+        <div class="row text-center">
+            <div id="share-link" class="col-md-12"></div>
+        </div>
+    </div>
+    <div id="videosContainer" class="col-md-6 col-sm-12">
+        <video class="img-fluid" controls playsinline autoplay></video>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12">
+                <button id="stop-broadcast-btn" class="btn btn-danger text-white" style="display: none;"><i class="fas fa-stop"></i> Parar transmissão</button>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ('partials/scripts') %>
+<script src="/js/stream.js"></script>
+<%- include ('partials/footer') %>

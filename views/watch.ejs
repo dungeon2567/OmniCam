@@ -1,0 +1,29 @@
+<%- include ('partials/head') %>
+<div class="row text-center mb-3">
+    <div class="col-md-12">
+        <h3>
+            <i class="fas fa-video"></i> SigeoCam<br>
+            <small class="text-muted">Para assistir a transmissão compartilhada por whatsapp clique no botão abaixo</small>
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <form class="form-inline justify-content-center">
+            <input id="room" type="hidden" value="<%= typeof token !== 'undefined' ? token : '' %>">
+            <button id="broadcast-btn" type="submit" class="btn btn-primary mb-2">Assistir Transmissão</button>
+            <small id="broadcastIdHelpBlock" class="form-text text-muted text-justify mx-sm-3 mb-2">
+                <span class="font-weight-bold">Nota:</span> Este é um sistema de transmissão de vídeo em tempo real. Para assistir a transmissão que foi compartilhada com você é só clicar no botão acima.
+            </small>
+        </form>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <video class="img-fluid" controls playsinline autoplay></video>
+        <div class="row text-center">
+            <div id="download-link" class="col-md-12"></div>
+        </div>
+    </div>
+</div>
+<%- include ('partials/scripts') %>
+<script src="/js/watch.js"></script>
+<%- include ('partials/footer') %>

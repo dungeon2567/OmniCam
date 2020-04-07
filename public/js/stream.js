@@ -136,10 +136,10 @@ function gotStream(stream) {
 
   // create whatsapp share link
   const a = document.createElement('a')
-  a.href = encodeURIComponent(window.location.href) + `watch/${hash}`
+  a.href = window.location.href`watch/${hash}`
   a.setAttribute('class', 'text-success font-weight-bold')
   a.setAttribute('target', '_blank')
-  a.innerHTML = encodeURIComponent(window.location.href) + `watch/${hash}`;
+  a.innerHTML = window.location.href + `watch/${hash}`;
 
   const shareLink = document.getElementById('share-link')
   shareLink.appendChild(a)
